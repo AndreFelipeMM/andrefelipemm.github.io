@@ -64,10 +64,12 @@ body{
     width:100%
 }
 .preview-box{
-   width:100%
-}  
-.scroll{ 
-    Overflow-y: scroll;
+    width: 100%;
+    position: absolute;
+    margin:1% auto;
+    line-height: 1.4em;
+} 
+.scroll{ Overflow-y: scroll;
     width:100%
 }
 .body--share{
