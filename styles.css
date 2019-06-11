@@ -13,13 +13,31 @@ body{
     width:120rem
 }
 
-@media only screen and (min-width: 1020px) {
+/* tablet, landscape iPad, lo-res laptops ands desktops */ 
+@media  only screen and (min-width:961px)  {  
+    .preview-box{
+        margin: 10px 5%;
+        width: 100%;
+        border-radius: 3px;
+    }
+  }
+/* big landscape tablets, laptops, and desktops */
+@media  only screen and (min-width:1025px) {     
     .preview-box{
         margin: 10px 5%;
         width: 100%;
         border-radius: 3px;
     }
 }
+/* hi-res laptops and desktops */
+@media  only screen and (min-width:1281px) {     
+    .preview-box{
+        margin: 10px 50%;
+        width: 100%;
+        border-radius: 3px;
+    }
+}
+
  @media only screen and (min-width: 768px) {
     .preview-box{
         margin: 10px 50%;
