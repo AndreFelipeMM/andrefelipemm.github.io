@@ -15,16 +15,14 @@ body{
 
 @media only screen and (min-width: 1020px) {
     .preview-box{
-        position: absolute;
-        margin: 10px 13%;
+        margin: 10px 5%;
         width: 100%;
         border-radius: 3px;
     }
 }
  @media only screen and (min-width: 768px) {
     .preview-box{
-        position:absolute;
-        margin: 10px auto;
+        margin: 10px 50%;
         width: 100%;
         border-radius: 3px;
     }
@@ -32,8 +30,7 @@ body{
 
  @media only screen and (min-width: 479px){
     .preview-box { 
-        position:absolute;
-        margin: 10px auto;
+        margin: 10px 5%;
         width: 100%;
     }
 }
