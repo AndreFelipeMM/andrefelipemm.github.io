@@ -13,45 +13,45 @@ body{
     width:120rem
 }
 
-/* tablet, landscape iPad, lo-res laptops ands desktops */ 
-@media  only screen and (min-width:961px)  {  
+/* @media  only screen and (max-width:2000px) {     
     .preview-box{
-        margin: 10px 5%;
-        width: 100%;
-        border-radius: 3px;
-    }
-  }
-/* big landscape tablets, laptops, and desktops */
-@media  only screen and (min-width:1025px) {     
-    .preview-box{
-        margin: 10px 5%;
+        margin: 10px 89%;
         width: 100%;
         border-radius: 3px;
     }
 }
-/* hi-res laptops and desktops */
+
+@media  only screen and (min-width:1500px) {     
+    .preview-box{
+        margin: 10px 50%;
+        width: 100%;
+        border-radius: 3px;
+    }
+}
+
+
 @media  only screen and (min-width:1281px) {     
     .preview-box{
-        margin: 10px 50%;
+        margin: 10px 23%;
         width: 100%;
         border-radius: 3px;
     }
 }
 
- @media only screen and (min-width: 768px) {
+ @media only screen and (max-width: 768px) {
     .preview-box{
-        margin: 10px 50%;
+        margin: 10px 5%;
         width: 100%;
         border-radius: 3px;
     }
 }
 
- @media only screen and (min-width: 479px){
+ @media only screen and (max-width: 479px){
     .preview-box { 
         margin: 10px 5%;
         width: 100%;
     }
-}
+} */
 .body--webpdf .template__fixed-element,.body--pdf .template__fixed-element{
     display:none
 }
@@ -59,21 +59,16 @@ body{
     height:169.71429rem;
     overflow:hidden
 }
-/* .body--preview .preview-box{
-    width: 100%;
-    position: absolute;
-    margin:5% auto;
-    line-height: 1.4em;
-} */
-/* .preview-box{
-    position: relative;
-    margin: 10px 50%;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-}  */
-.scroll{ Overflow-y: scroll
+.container{
+    margin:auto;
+    width:100%
+}
+.preview-box{
+   width:100%
+}  
+.scroll{ 
+    Overflow-y: scroll;
+    width:100%
 }
 .body--share{
     height:100%;
