@@ -7,51 +7,169 @@ html{
     line-height:1.25;
     color:#212121
 }
+/*langdisplay*/
+
+
+  input {
+    font-family: inherit;
+    line-height: normal;
+    margin: 0;
+  }
+  input[type="radio"] {
+    box-sizing: border-box;
+    padding: 0;
+  }
+  .switch-container {
+    left: 50%;
+    margin: -32px 0 0 -80px;
+    position: absolute;
+    top: 20%;
+    width: 60px;
+  }
+  .switch {
+    background: #fff;
+    border-radius: 32px;
+    cursor: pointer;
+    display: block;
+    height: 32px;
+    position: relative;
+    width: 60px;
+  }
+  .switch label {
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 36px;
+    text-transform: uppercase;
+    -webkit-transition: color 0.2s ease;
+    -moz-transition: color 0.2s ease;
+    -ms-transition: color 0.2s ease;
+    -o-transition: color 0.2s ease;
+    transition: color 0.2s ease;
+    width: 32px;
+  }
+  .switch label:nth-of-type(1) {
+    left: -75%;
+    position: absolute;
+    text-align: right;
+  }
+  .switch label:nth-of-type(2) {
+    position: absolute;
+    right: -75%;
+    text-align: left;
+  }
+  .switch input {
+    cursor: pointer;
+    height: 32px;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    width: 80px;
+    z-index: 2;
+  }
+  .switch input:checked ~ label:nth-of-type(1) {
+    color: #fff;
+  }
+  .switch input:checked ~ label:nth-of-type(2) {
+    color: #808080;
+  }
+  .switch input ~ :checked ~ label:nth-of-type(1) {
+    color: #808080;
+  }
+  .switch input ~ :checked ~ label:nth-of-type(2) {
+    color: #fff;
+  }
+  .switch input:checked ~ .toggle {
+    left: 4px;
+  }
+  .switch input ~ :checked ~ .toggle {
+    left: 32px;
+  }
+  .switch input:checked {
+    z-index: 0;
+  }
+  .toggle {
+    background: #000;
+    border-radius: 50%;
+    height: 24px;
+    left: 0;
+    position: absolute;
+    top: 4px;
+    -webkit-transition: left 0.2s ease;
+    -moz-transition: left 0.2s ease;
+    -ms-transition: left 0.2s ease;
+    -o-transition: left 0.2s ease;
+    transition: left 0.2s ease;
+    width: 24px;
+    z-index: 1;
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 body{
     margin:0;
     padding:0;
     width:120rem
 }
-
-/* @media  only screen and (max-width:2000px) {     
-    .preview-box{
-        margin: 10px 89%;
-        width: 100%;
-        border-radius: 3px;
-    }
-}
-
-@media  only screen and (min-width:1500px) {     
-    .preview-box{
-        margin: 10px 50%;
-        width: 100%;
-        border-radius: 3px;
-    }
-}
-
-
-@media  only screen and (min-width:1281px) {     
-    .preview-box{
-        margin: 10px 23%;
-        width: 100%;
-        border-radius: 3px;
-    }
-}
-
- @media only screen and (max-width: 768px) {
-    .preview-box{
-        margin: 10px 5%;
-        width: 100%;
-        border-radius: 3px;
-    }
-}
-
- @media only screen and (max-width: 479px){
-    .preview-box { 
-        margin: 10px 5%;
-        width: 100%;
-    }
-} */
 .body--webpdf .template__fixed-element,.body--pdf .template__fixed-element{
     display:none
 }
