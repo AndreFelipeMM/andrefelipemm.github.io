@@ -2,6 +2,9 @@
     -webkit-box-sizing:border-box;
     box-sizing:border-box;
 }
+body{
+  margin: 0;
+}
 html{
     font-size:7.5px;
     line-height:1.25;
@@ -22,8 +25,8 @@ html{
         flex-direction: column;
         justify-content: center;
         flex-wrap: nowrap;
-        margin: 10px;
-        background-color:#101014;
+      
+        background-color: #101014;
 
     }
     .banner{
@@ -84,6 +87,74 @@ html{
         position: relative;
     }
 
+    .navmenu{
+      position: sticky;
+      top: -1px;
+      z-index: 10;
+      
+      display: flex;
+      justify-content: space-around;
+      align-items: flex-end;
+      font-size: xx-large;
+
+
+      width: 100%;
+      height: auto;
+      padding: 10px;
+      background-color: black;
+      margin-bottom: 10px;
+
+      
+    }
+    .navmenu a{
+      color: inherit;
+      opacity: .5;
+      text-decoration: none;
+      transition: .5s;
+
+    }
+    .navmenu a:hover{
+      color: inherit;
+      opacity: 1;
+      text-decoration: none;    
+    }
+    .navmenu-item{
+      transition: 1s;
+    
+    }
+    .navmenu-item:hover{
+      transition: 1s;
+      transform: scale(1.1);
+    }
+
+    .bodymargin{
+      margin: 10px;
+    }
+    .footer{
+      position: fixed;
+      bottom: 0; 
+      display: flex;
+      justify-content: space-evenly;
+      font-size: xx-large;
+      width: 100%;
+      height: auto;
+      padding: 10px;
+      background-color: black;
+      
+    }
+    .sm-icon{
+      width: 30px;
+      height: auto;
+      opacity: .4;
+      transition: 1s;
+      cursor: pointer;
+    }
+    .sm-icon:hover{
+      
+      width: 40px;
+      height: auto;
+      opacity: 1;
+    }
 
 
 
@@ -117,7 +188,7 @@ html{
     animation: .6s fadeInUp;
   }
   .fadeInUpDelay{
-    animation: 3s fadeInUp;
+    animation: 1.2s fadeInUpDelay;
   }
 
 
