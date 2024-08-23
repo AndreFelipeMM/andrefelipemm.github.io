@@ -33,7 +33,7 @@ html{
         display: flex;
         justify-content: center;
         max-width: 100%;
-        height: 100%;
+        height: 450px;
         max-height: 450px;
         background-size: cover;
         background-position: center;
@@ -129,11 +129,14 @@ html{
     }
 
     .bodymargin{
+      display: flex;
+      flex-direction: column;
       margin: 10px;
+     
     }
     .footer{
-      position: fixed;
-      bottom: 0; 
+      /* position: fixed;
+      bottom: 0;  */
       display: flex;
       justify-content: space-evenly;
       font-size: xx-large;
@@ -156,7 +159,7 @@ html{
       height: auto;
       opacity: 1;
     }
-
+    
 
 
 /* animations */
@@ -194,7 +197,7 @@ html{
 
 
 /* Breakpoints */
-@media (max-width: 751px){
+@media only screen and (max-device-width: 950px){
     .thumbnail{
         object-fit: cover;
         width: 100%;
