@@ -67,6 +67,7 @@ html{
     }
     .container:hover .textparent{
       opacity: .8;
+      cursor: pointer;
         
     }
 
@@ -77,7 +78,7 @@ html{
         
     }
     .text{
-        font-size: 20px;
+        font-size: 50px;
         position: absolute;  
         left: 50%;                        /* horizontal alignment */
         top: 50%;                         /* vertical alignment */
