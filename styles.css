@@ -99,6 +99,7 @@ html{
     }
     .container-project{
       width: 90%;
+      margin-top: 10px;
     }
     .image-project{
       width: 100%;
