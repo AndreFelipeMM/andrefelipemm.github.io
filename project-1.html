@@ -1,0 +1,126 @@
+<!-- saved from url=(0050)https://resume.io/app/resumes/3940549/preview.html -->
+<html style="">
+   <head>
+      <title>A Broken Link</title>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <link rel="stylesheet" media="all" href="./styles.css">
+      <style>
+         @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+         </style>
+         
+      
+         <script src="mainscript.js"></script>
+    
+   </head>
+  
+    <body class="main" data-gr-c-s-loaded="true" style="">
+      <!-- Header -->
+      <div class="navmenu inter">
+         <div class="navmenu-item name">André Felipe</div>
+         <div class="navmenu-item"><a href="index.html">Home</a></div>
+         <div class="navmenu-item"><a href="about.html">About</a></div>
+         <div class="navmenu-item"><a href="other.html">Other</a></div>
+      </div>
+      <!-- body -->
+      <div class="bodymargin">
+         <div class="banner fadeInUp" style="background-image: url(img/Bancarella/bancarella-2.png);">
+         
+         </div>
+         <div class="project-title fadeInUpDelay" style="display: flex; justify-content: center;">
+            <p class="inter" style="font-size: xx-large; align-self: center;">Personal Projects</p>
+         </div>
+         <div class="preview-box-project  fadeInUpDelay">   
+
+            <div class="player" class="player__button toggle" title="Toggle Play">
+               <video class="player__video viewer" src="img/brokenlink/broken-video.mp4"></video>
+               
+               <div class="player__controls">
+                 <div class="progress">
+                   <div class="progress__filled"></div>
+                 </div>
+                 
+               </div>
+             </div>
+
+
+
+
+
+
+            <div class="container-project">
+               <img class="image-project" src="img/brokenlink-1.jpg" alt="">
+            </div>
+
+
+         </div>
+      </div>
+
+      <script>
+         /* Get Our Elements */
+         const player = document.querySelector('.player');
+         const video = player.querySelector('.viewer');
+         console.log(video)
+         const progress = player.querySelector('.progress');
+         const progressBar = player.querySelector('.progress__filled');
+         const toggle = player.querySelector('.toggle');
+         const skipButtons = player.querySelectorAll('[data-skip]');
+         const ranges = player.querySelectorAll('.player__slider');
+         
+         /* Build */
+         
+         function togglePlay() {
+         const method = video.paused ? 'play' : 'pause';
+         video[method]();  
+         }
+         function updateButton() {
+         const icon = this.paused ? '►' : '❚ ❚';
+         toggle.textContent = icon;
+         }
+         
+         function skip() {
+         console.log(this.dataset.skip);
+         video.currentTime += parseFloat(this.dataset.skip);
+         }
+         
+         function handleRangeUpdate() {
+         video[this.name] = this.value;
+         }
+         function handleProgress(){
+         const percent = (video.currentTime / video.duration) * 100;
+         progressBar.style.flexBasis = `${percent}%`;
+         }
+         function scrub(e) {
+         const scrubTime = (e.offsetX / progress.offsetWidth) * video.duration;
+         video.currentTime = scrubTime;
+         }
+         
+         /* Hook Up the event listener */
+         video.addEventListener('click', togglePlay);
+         video.addEventListener('play', updateButton);
+         video.addEventListener('pause', updateButton);
+         video.addEventListener('timeupdate', handleProgress);
+         
+         toggle.addEventListener('click',togglePlay);
+         skipButtons.forEach(button => button.addEventListener('click', skip));
+         ranges.forEach(button => button.addEventListener('change', handleRangeUpdate));
+         ranges.forEach(button => button.addEventListener('mousemove', handleRangeUpdate));
+         
+         let mousedown = false;
+         progress.addEventListener('click', scrub);
+         progress.addEventListener('mousemove', (e) => mousedown && scrub(e));
+         progressBar.addEventListener('mousedown', () => mousedown = true);
+         progressBar.addEventListener('mouseup', () => mousedown = false);
+   
+        </script>
+   </body>
+   <footer class="footer">
+         <div class="icon-link">
+            <a href="https://www.artstation.com/andrefelipe" target="_blank"> <img class="sm-icon" src="as-icon.png" alt=""></a>
+         </div>
+         <div>
+            <a href="https://www.linkedin.com/in/andrefelipemm/" target="_blank">
+            <img class="sm-icon" src="link-icon.png" alt="">
+            </a>
+         </div>
+      </footer>
+</html>
