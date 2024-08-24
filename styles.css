@@ -108,7 +108,7 @@ html{
     }
     .container a{
       display: flex;
-      height: 100%;
+      max-height: auto;
     }
     .name{
       align-self: flex-start;
@@ -445,6 +445,12 @@ input[type=range]::-moz-range-thumb {
 
 /* Breakpoints */
 @media (max-width: 950px){
+  .container a{
+    height: auto;
+    width: 100%;
+    max-height: 100%;
+    max-width: 100%;
+  }
   .thumbnail{
       object-fit: cover;
       width: 100%;
@@ -465,6 +471,12 @@ input[type=range]::-moz-range-thumb {
   }
 }
 @media only screen and (max-device-width: 950px){
+  .container a{
+    height: auto;
+    width: 100%;
+    max-height: 100%;
+    max-width: 100%;
+  }
     .thumbnail{
         object-fit: cover;
         width: 100%;
