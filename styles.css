@@ -159,7 +159,14 @@ html{
       flex-direction: column;
       margin: 10px;
       margin-bottom: 80px;
-      height: 90%;
+     
+    }
+    
+    .bodymargin-project{
+      display: flex;
+      flex-direction: column;
+      margin: 10px;
+      margin-bottom: 80px;
      
     }
     .bodymargin-2{
@@ -449,7 +456,8 @@ input[type=range]::-moz-range-thumb {
 
 /* Breakpoints */
 @media (max-width: 950px){
-  .banner{
+ 
+  .banner-project{
     height: 280px;
   }
   .container a{
@@ -478,7 +486,8 @@ input[type=range]::-moz-range-thumb {
   }
 }
 @media only screen and (max-device-width: 950px){
-  .banner{
+  
+  .banner-project{
     height: 280px;
   }
   .container a{
