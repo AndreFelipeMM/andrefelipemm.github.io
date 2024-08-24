@@ -287,6 +287,23 @@ html{
   overflow: hidden;
   border-radius: 15px;
 }
+.play-icon{
+  position: absolute;
+  opacity: .8;
+  top: 50%;
+  left: 50%;
+}
+.play-icon-invisible{
+  position: absolute;
+  opacity: 0;
+  top: 50%;
+  left: 50%;
+}
+.play-icon img{
+  height: 55px;
+  width: 55px;
+
+}
 .player:hover{
   cursor: pointer;
 }

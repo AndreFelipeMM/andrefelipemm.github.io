@@ -32,6 +32,9 @@
          <div class="preview-box-project  fadeInUpDelay">   
 
             <div class="player" class="player__button toggle" title="Toggle Play">
+               <div class="play-icon">
+                  <img src="playicon.png" alt="">
+               </div>
                <video class="player__video viewer" src="img/brokenlink/broken-video.mp4"></video>
                
                <div class="player__controls">
@@ -63,19 +66,30 @@
          const progress = player.querySelector('.progress');
          const progressBar = player.querySelector('.progress__filled');
          const toggle = player.querySelector('.toggle');
+         const playericon = player.querySelector('.play-icon');
          const skipButtons = player.querySelectorAll('[data-skip]');
          const ranges = player.querySelectorAll('.player__slider');
          
          /* Build */
          
          function togglePlay() {
-         const method = video.paused ? 'play' : 'pause';
-         video[method]();  
+           
+            const method = video.paused ? 'play' : 'pause';
+            playericon.classList.remove('play-icon')
+            playericon.classList.add('play-icon-invisible')
+            hideIcon();
+            video[method]();  
+            const icon = video.paused ? showIcon() : hideIcon();
          }
-         function updateButton() {
-         const icon = this.paused ? '►' : '❚ ❚';
-         toggle.textContent = icon;
+         function hideIcon() {
+            playericon.classList.remove('play-icon')
+            playericon.classList.add('play-icon-invisible')
          }
+         function showIcon() {
+            playericon.classList.remove('play-icon-invisible')
+            playericon.classList.add('play-icon')
+         }
+         
          
          function skip() {
          console.log(this.dataset.skip);
@@ -96,8 +110,8 @@
          
          /* Hook Up the event listener */
          video.addEventListener('click', togglePlay);
-         video.addEventListener('play', updateButton);
-         video.addEventListener('pause', updateButton);
+         video.addEventListener('play', updateIcon);
+         video.addEventListener('pause', updateIcon);
          video.addEventListener('timeupdate', handleProgress);
          
          toggle.addEventListener('click',togglePlay);
