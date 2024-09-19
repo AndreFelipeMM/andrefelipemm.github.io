@@ -8,12 +8,16 @@
          @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
          </style>
       
-         
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/core.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/md5.js"></script>
       <script src="mainscript.js"></script>
       <script>
          let password = prompt('Password');
-         if(password==1337){
-
+         var pass = "e48e13207341b6bffb7fb1622282247b"
+         var hash = CryptoJS.MD5(password);
+         
+         if(hash.toString() == pass){
+            console.log("logado")
          }else{
             window.stop()
             window.location.replace("index.html");
