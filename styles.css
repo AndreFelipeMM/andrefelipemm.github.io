@@ -51,7 +51,7 @@ html{
         height: 300px;
         max-height: auto;
         border-radius: 8px;
-        padding: 2px;
+        /* padding: 2px; */
        
     }
     .textparent{
@@ -96,6 +96,7 @@ html{
     }
     .container{
         position: relative;
+        margin: 2px;
     }
     .container-project{
       width: 90%;
@@ -452,6 +453,19 @@ input[type=range]::-moz-range-thumb {
   border-radius: 50px;
   background: #ffc600;
   cursor: pointer;
+}
+
+.gradientoverlay{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    background: rgb(0,0,0);
+    background: radial-gradient(circle, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 40%, rgba(0,0,0,.3) 56%,rgba(0,0,0,.8)101%);
+    border-radius: 7.2px;
 }
 
 /* Breakpoints */
