@@ -470,6 +470,10 @@ input[type=range]::-moz-range-thumb {
 
 /* Breakpoints */
 @media (max-width: 950px){
+  .container{
+    width: 100%;
+    max-width: 100%;
+  }
  
   .banner-project{
     height: 280px;
@@ -500,7 +504,10 @@ input[type=range]::-moz-range-thumb {
   }
 }
 @media only screen and (max-device-width: 950px){
-  
+  .container{
+    width: 100%;
+    max-width: 100%;
+  }
   .banner-project{
     height: 280px;
   }
