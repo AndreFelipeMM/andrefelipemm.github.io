@@ -1,0 +1,92 @@
+<!-- saved from url=(0050)https://resume.io/app/resumes/3940549/preview.html -->
+<html style="">
+   <head>
+      <title>André Felipe Environment Art - NDA and WIP section</title>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="robots" content="noindex, nofollow, noarchive">
+      <meta name="referrer" content="no-referrer">
+      <link rel="stylesheet" media="all" href="./styles.css?v=8">
+      <link rel="icon" type="image/x-icon" href="./favicon.ico">
+
+      <style>
+         @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+         </style>
+
+      <script src="mainscript.js?v=5"></script>
+      <script src="nda.js?v=4"></script>
+
+   </head>
+
+   <body class="main" data-gr-c-s-loaded="true" style="">
+      <!-- Header -->
+      <div class="navmenu inter">
+         <div class=" name"><a href="index.html">André Felipe</a></div>
+         <div class="navmenu-item"><a href="index.html">Home</a></div>
+         <div class="navmenu-item"><a href="about.html">About</a></div>
+         <div class="navmenu-item"><a href="other.html">NDA</a></div>
+         <div class="navmenu-item nda-lock" hidden><a href="#" id="nda-lock">Lock</a></div>
+      </div>
+      <!-- body -->
+      <div id="nda-view">
+         <div class="bodymargin">
+            <form class="nda-login fadeInUp inter" id="nda-login">
+               <p style="font-size: xx-large;">WIP, Sculpts and NDA</p>
+               <p style="font-size: medium; font-weight: 450;">This section is password protected.</p>
+               <input type="password" id="nda-password" placeholder="Password" autocomplete="current-password" required autofocus>
+               <button type="submit" id="nda-submit">Unlock</button>
+               <p class="nda-error" id="nda-error"></p>
+            </form>
+         </div>
+      </div>
+
+      <script>
+         const view = document.getElementById("nda-view");
+         const lockLink = document.querySelector(".nda-lock");
+
+         function route() {
+            const id = location.hash.slice(1);
+            return id ? NDA.renderPage(view, id) : NDA.renderHub(view);
+         }
+         function unlocked() {
+            lockLink.hidden = false;
+            window.addEventListener("hashchange", route);
+            return route();
+         }
+
+         document.getElementById("nda-login").addEventListener("submit", async (e) => {
+            e.preventDefault();
+            const button = document.getElementById("nda-submit");
+            const error = document.getElementById("nda-error");
+            button.disabled = true;
+            error.textContent = "Unlocking...";
+            try {
+               await NDA.unlock(document.getElementById("nda-password").value);
+               await unlocked();
+            } catch (err) {
+               error.textContent = "Wrong password.";
+               button.disabled = false;
+            }
+         });
+
+         document.getElementById("nda-lock").addEventListener("click", (e) => {
+            e.preventDefault();
+            NDA.lock();
+            location.replace("other.html");
+         });
+
+         NDA.restore().then((ok) => ok && unlocked());
+      </script>
+   </body>
+   <footer class="footer">
+         <div class="icon-link">
+            <a href="https://www.artstation.com/andrefelipe" target="_blank"> <img class="sm-icon" src="as-icon.png" alt="ArtStation"></a>
+         </div>
+         <div>
+            <a href="https://www.linkedin.com/in/andrefelipemm/" target="_blank">
+            <img class="sm-icon" src="link-icon.png" alt="LinkedIn">
+            </a>
+         </div>
+      </footer>
+
+</html>
